@@ -1,0 +1,4 @@
+React masterclass:
+chapter 1: react setup, git clone and npm i for node module.
+Chapter 2: multiple component, JSX syntax, props, props as attribute, variable, object, object destructure, spreed operator,
+Chapter 3: 
