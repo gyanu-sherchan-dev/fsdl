@@ -1,18 +1,24 @@
 import "./App.css";
 import Video from "./components/Video";
+import { list } from "./data/data";
 
 function App() {
-  const obj = {
-    title: "Node.js",
-    views: "200K",
-    time: "4 months",
-  };
-
   return (
     <div>
       <div>Hello</div>
-      <Video {...obj} />
-      <Video title="Mongo" views="120k" time="3 month" />
+      {list.map((video, id) => {
+        return (
+          <Video
+            key={id}
+            verified={video.verified}
+            title={video.title}
+            views={video.views}
+            time={video.time}
+            channel={video.channel}
+            id={id}
+          />
+        );
+      })}
     </div>
   );
 }

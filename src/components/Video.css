@@ -19,7 +19,8 @@
 .channel,
 .views {
   font-size: small;
-  color: #ccc;
+  color: purple;
+  font-weight: 500;
   margin-bottom: 0.2em;
 }
 
