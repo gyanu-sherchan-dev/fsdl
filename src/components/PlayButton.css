@@ -1,0 +1,10 @@
+button {
+  background: black;
+  color: white;
+}
+
+button:hover {
+  background: yellow;
+  color: blueviolet;
+  font-weight: 20px;
+}

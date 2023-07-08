@@ -1,4 +1,5 @@
 import "./Video.css";
+import PlayButton from "./PlayButton";
 
 function Video({ id, title, channel = "Code Maniac", views, time, verified }) {
   console.log({ title, channel });
@@ -31,6 +32,7 @@ function Video({ id, title, channel = "Code Maniac", views, time, verified }) {
         <div className="views">
           {views} views <span>.</span> {time}
         </div>
+        <PlayButton />
       </div>
     </>
   );
