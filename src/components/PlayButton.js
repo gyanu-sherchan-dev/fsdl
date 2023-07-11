@@ -2,7 +2,8 @@ import "./PlayButton.css";
 
 function PlayButton({ message, children, onPlay, onPause }) {
   let playing = false; // don't use this approach to change the DOM as per the this variable value
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.stopPropagation();
     if (playing) onPause();
     else onPlay();
     playing = !playing;

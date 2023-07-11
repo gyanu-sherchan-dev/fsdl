@@ -1,7 +1,14 @@
 import "./Video.css";
-import PlayButton from "./PlayButton";
 
-function Video({ id, title, channel = "Code Maniac", views, time, verified }) {
+function Video({
+  id,
+  title,
+  channel = "Code Maniac",
+  views,
+  time,
+  verified,
+  children,
+}) {
   console.log({ title, channel });
   // let channelJSX;
   // if (verified) {
@@ -17,7 +24,12 @@ function Video({ id, title, channel = "Code Maniac", views, time, verified }) {
 
   return (
     <>
-      <div className="container">
+      <div
+        className="container"
+        onClick={() => {
+          "below html event could create this event propogation";
+        }}
+      >
         <div className="pic">
           <img src={`https://picsum.photos/id/${id}/300/300`} alt="Kitty" />
         </div>
@@ -32,16 +44,7 @@ function Video({ id, title, channel = "Code Maniac", views, time, verified }) {
         <div className="views">
           {views} views <span>.</span> {time}
         </div>
-        <PlayButton
-          message="lets play"
-          onPlay={() => console.log("Play")}
-          onPause={() => console.log("Pause")}
-        >
-          Play
-        </PlayButton>
-        {/* <PlayButton message="stop it now" onSmash={() => console.log("S")}>
-          Stop
-        </PlayButton> */}
+        {children}
       </div>
     </>
   );
