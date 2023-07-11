@@ -32,12 +32,16 @@ function Video({ id, title, channel = "Code Maniac", views, time, verified }) {
         <div className="views">
           {views} views <span>.</span> {time}
         </div>
-        <PlayButton message="lets play" onSmash={() => console.log("p")}>
+        <PlayButton
+          message="lets play"
+          onPlay={() => console.log("Play")}
+          onPause={() => console.log("Pause")}
+        >
           Play
         </PlayButton>
-        <PlayButton message="stop it now" onSmash={() => console.log("S")}>
+        {/* <PlayButton message="stop it now" onSmash={() => console.log("S")}>
           Stop
-        </PlayButton>
+        </PlayButton> */}
       </div>
     </>
   );
