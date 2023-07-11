@@ -1,10 +1,11 @@
 import "./PlayButton.css";
 
-function PlayButton() {
+function PlayButton({ message, children, onSmash }) {
   const handleClick = () => {
-    console.log("play");
+    onSmash();
+    console.log(message);
   };
-  return <button onClick={handleClick}>Play</button>;
+  return <button onClick={handleClick}>{children}</button>;
 }
 
 export default PlayButton;
