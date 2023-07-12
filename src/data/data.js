@@ -1,4 +1,4 @@
-export const list = [
+const list = [
   {
     id: 1,
     title: "Node JS Tutorial",
@@ -24,3 +24,5 @@ export const list = [
     verified: false,
   },
 ];
+
+export default list;
